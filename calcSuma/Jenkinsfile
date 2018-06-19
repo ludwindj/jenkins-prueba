@@ -4,14 +4,14 @@ stages{
 stage('Compilacion'){
     steps{
 dir('calcSuma'){
-    sh 'mvn clean package -DskipTests'
+    bat 'mvn clean package -DskipTests'
 }
 }
 }
 stage('Pruebas'){
     steps{
 dir('calcSuma'){
-    sh 'mvn test'
+    bat 'mvn test'
 }
 }
 }
@@ -22,7 +22,7 @@ when{
 }
 steps{
 dir('calcSuma'){
-sh 'java -jar target/calcSuma-1.0-SNAPSHOT.jar 5 5
+bat 'java -jar target/calcSuma-1.0-SNAPSHOT.jar 5 5
 '
 }
 }
@@ -34,7 +34,7 @@ when{
 }
 steps{
 dir('calcSuma'){
-sh 'java -jar target/calcSuma-1.0-SNAPSHOT.jar 2 2
+bat 'java -jar target/calcSuma-1.0-SNAPSHOT.jar 2 2
 '
 }
 }
