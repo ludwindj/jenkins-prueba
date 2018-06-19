@@ -10,9 +10,12 @@ package com.smgo.calcsuma;
  * @author ludwin.ayala
  */
 public class Principal {
-    public static void main( String args[] )
+    public static void main(String args[] )
    {
-       SumarNumeros sum = new SumarNumeros();
-       sum.calSuma(2,3);
+       
+       int a = Integer.valueOf(args[0]);
+       int b = Integer.valueOf(args[1]);
+       
+       System.out.println("La suma es "+(a+b));
    }
 }
